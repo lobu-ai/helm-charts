@@ -1,5 +1,59 @@
 apiVersion: v1
 entries:
+  lobu:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Initial Helm chart for Lobu deployment
+        - kind: added
+          description: Kubernetes deployment with persistent volumes
+      artifacthub.io/containsSecurityUpdates: "false"
+      artifacthub.io/images: |
+        - name: lobu-dispatcher
+          image: buremba/lobu-dispatcher:latest
+        - name: lobu-worker
+          image: buremba/lobu-worker-base:latest
+      artifacthub.io/license: MIT
+      artifacthub.io/links: |
+        - name: GitHub Repository
+          url: https://github.com/lobu-ai/lobu
+        - name: Documentation
+          url: https://github.com/lobu-ai/lobu#readme
+      artifacthub.io/operator: "false"
+      artifacthub.io/operatorCapabilities: Basic Install
+      category: Communication
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-02-15T08:43:57.734816114Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: ~24.x
+    - condition: tempo.enabled
+      name: tempo
+      repository: https://grafana.github.io/helm-charts
+      version: ~1.x
+    description: Lobu - Kubernetes deployment for thread-based AI conversations
+    digest: 7a19ef99cdb3a1e329196a05329cbfebebbbb241ddeefa27bde4e009887a3670
+    home: https://github.com/lobu-ai/lobu
+    keywords:
+    - claude
+    - slack
+    - ai
+    - bot
+    - kubernetes
+    - conversations
+    maintainers:
+    - email: emrekabakci@gmail.com
+      name: Burak Emre Kabakci
+    name: lobu
+    sources:
+    - https://github.com/lobu-ai/lobu
+    type: application
+    urls:
+    - https://lobu-ai.github.io/helm-charts/lobu-1.0.1.tgz
+    version: 1.0.1
   peerbot:
   - annotations:
       artifacthub.io/changes: "- kind: added\n  description: Initial Helm chart for
@@ -23,7 +77,7 @@ entries:
       category: Communication
     apiVersion: v2
     appVersion: 1.0.0
-    created: "2026-02-15T08:21:03.45337939Z"
+    created: "2026-02-15T08:43:57.740919291Z"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -47,7 +101,7 @@ entries:
     - https://github.com/buremba/peerbot
     type: application
     urls:
-    - https://termos-dev.github.io/helm-charts/peerbot-1.0.1.tgz
+    - https://lobu-ai.github.io/helm-charts/peerbot-1.0.1.tgz
     version: 1.0.1
   termos:
   - annotations:
@@ -73,7 +127,7 @@ entries:
       category: Communication
     apiVersion: v2
     appVersion: 1.0.0
-    created: "2026-02-15T08:21:03.462401091Z"
+    created: "2026-02-15T08:43:57.749675504Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -101,6 +155,6 @@ entries:
     - https://github.com/termos-dev/termos
     type: application
     urls:
-    - https://termos-dev.github.io/helm-charts/termos-1.0.1.tgz
+    - https://lobu-ai.github.io/helm-charts/termos-1.0.1.tgz
     version: 1.0.1
-generated: "2026-02-15T08:21:03.446726539Z"
+generated: "2026-02-15T08:43:57.72570075Z"
