@@ -24,7 +24,7 @@ entries:
       category: Communication
     apiVersion: v2
     appVersion: 1.0.0
-    created: "2026-02-17T19:17:20.501207107Z"
+    created: "2026-02-17T19:24:19.722747532Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -35,7 +35,7 @@ entries:
       repository: https://grafana.github.io/helm-charts
       version: ~1.x
     description: Lobu - Kubernetes deployment for thread-based AI conversations
-    digest: 9d4a95ee831d4ebdbfcef030c5421bf23eda8f3c9a460644f4df85fa42bd83b7
+    digest: d2a91ceb4c04f6adff03841bce52c726e2cd2ae299f03f824d34c8872578855c
     home: https://github.com/lobu-ai/lobu
     keywords:
     - claude
@@ -77,7 +77,7 @@ entries:
       category: Communication
     apiVersion: v2
     appVersion: 1.0.0
-    created: "2026-02-17T19:17:20.508153196Z"
+    created: "2026-02-17T19:24:19.728202263Z"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -127,7 +127,7 @@ entries:
       category: Communication
     apiVersion: v2
     appVersion: 1.0.0
-    created: "2026-02-17T19:17:20.516484308Z"
+    created: "2026-02-17T19:24:19.737111609Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -157,4 +157,4 @@ entries:
     urls:
     - https://lobu-ai.github.io/helm-charts/termos-1.0.1.tgz
     version: 1.0.1
-generated: "2026-02-17T19:17:20.491701655Z"
+generated: "2026-02-17T19:24:19.712826571Z"
